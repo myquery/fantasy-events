@@ -100,7 +100,7 @@ export default function Contact() {
               </div>
               <h3 className="text-lg font-semibold text-gray-900">Our Address</h3>
             </div>
-            <p className="text-gray-600 pl-14">13 Ojo ola street ejigbo Lagos</p>
+            <p className="text-gray-600 pl-14">13 Ojo-ola street ejigbo Lagos</p>
           </motion.div>
 
           <motion.div 
