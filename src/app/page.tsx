@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Header from '@/components/Header'
 import Services from '@/components/Services'
 import HeroCarousel from '@/components/HeroCarousel'
