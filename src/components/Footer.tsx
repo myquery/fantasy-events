@@ -29,7 +29,7 @@ export default function Footer() {
             
             <div className="flex space-x-4">
               <Link 
-                href="https://facebook.com/yusufdaudu51" 
+                href="#" 
                 target="_blank"
                 aria-label="Facebook"
                 className="text-gray-400 hover:text-white transition-colors"
@@ -37,7 +37,7 @@ export default function Footer() {
                 <FaFacebook className="text-xl" />
               </Link>
               <Link 
-                href="https://instagram.com/dyCodes" 
+                href="#" 
                 target="_blank"
                 aria-label="Instagram"
                 className="text-gray-400 hover:text-white transition-colors"
@@ -45,7 +45,7 @@ export default function Footer() {
                 <FaInstagram className="text-xl" />
               </Link>
               <Link 
-                href="https://twitter.com/dyCodes" 
+                href="#" 
                 target="_blank"
                 aria-label="Twitter"
                 className="text-gray-400 hover:text-white transition-colors"
@@ -53,7 +53,7 @@ export default function Footer() {
                 <FaTwitter className="text-xl" />
               </Link>
               <Link 
-                href="https://wa.me/2349038254560" 
+                href="https://wa.me/2348164433875" 
                 target="_blank"
                 aria-label="WhatsApp"
                 className="text-gray-400 hover:text-white transition-colors"
