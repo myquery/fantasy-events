@@ -1,4 +1,3 @@
-// app/components/HeroCarousel.tsx
 'use client'
 
 import { motion, useAnimation, AnimatePresence } from 'framer-motion'

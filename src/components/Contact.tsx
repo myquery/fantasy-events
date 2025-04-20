@@ -57,6 +57,7 @@ export default function Contact() {
       setSubmitStatus('success');
     } catch (err) {
       setSubmitStatus('error');
+      console.log({err})
     } finally {
       setIsSubmitting(false);
     }
