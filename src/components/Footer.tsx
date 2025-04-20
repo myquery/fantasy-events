@@ -67,7 +67,7 @@ export default function Footer() {
 
       {/* Floating WhatsApp Button */}
       <Link
-        href="https://wa.me/2348164433875?text=Welcome!%20to%20Fantasy%20Events%20How%20can%20we%20be%20services"
+        href="https://wa.me/2348164433875?text=Welcome,%20This is %20Fantasy%20Events%20How%20can%20we%20be%20of%20service"
         target="_blank"
         className="fixed bottom-6 right-6 bg-green-600 hover:bg-green-700 text-white p-4 rounded-full shadow-lg transition-all z-50"
         aria-label="Chat on WhatsApp"
