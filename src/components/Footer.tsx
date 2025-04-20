@@ -45,7 +45,7 @@ export default function Footer() {
                 <FaInstagram className="text-xl" />
               </Link>
               <Link 
-                href="#" 
+                href="https://x.com/@fantasybyese" 
                 target="_blank"
                 aria-label="Twitter"
                 className="text-gray-400 hover:text-white transition-colors"
