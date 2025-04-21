@@ -99,7 +99,8 @@ export default function Services() {
             Ready to create something extraordinary?
           </h3>
           <Link 
-           href="https://wa.me/2348164433875?text=What%20is%your%20rates?"
+           href="https://wa.me/2348164433875?text=What%20is%20your%20rates?"
+            target="_blank"
           className="px-8 py-4 bg-gray-900 hover:bg-gray-800 text-white font-bold rounded-xl transition-all duration-300 hover:shadow-lg">
             Book a Free Consultation
           </Link>
