@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { useEffect, useState, useRef } from 'react'
 import Image from 'next/image'
-import { usePathname } from 'next/navigation'
+
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
@@ -11,7 +11,7 @@ export default function Header() {
   const [activeSection, setActiveSection] = useState('')
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 })
   const headerRef = useRef<HTMLElement>(null)
-  //const pathname = usePathname()
+
 
   // Track cursor position for interactive effects
   const handleMouseMove = (e: MouseEvent) => {
