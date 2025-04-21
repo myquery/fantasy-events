@@ -11,7 +11,7 @@ export default function Header() {
   const [activeSection, setActiveSection] = useState('')
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 })
   const headerRef = useRef<HTMLElement>(null)
-  const pathname = usePathname()
+  //const pathname = usePathname()
 
   // Track cursor position for interactive effects
   const handleMouseMove = (e: MouseEvent) => {
