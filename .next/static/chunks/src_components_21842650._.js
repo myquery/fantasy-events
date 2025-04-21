@@ -5,184 +5,6 @@
 
 var { g: global, __dirname, k: __turbopack_refresh__, m: module } = __turbopack_context__;
 {
-// "use client"
-// import Link from 'next/link'
-// import { useEffect, useState } from 'react'
-// import Image from 'next/image'
-// export default function Header() {
-//   const [scrolled, setScrolled] = useState(false)
-//   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-//   useEffect(() => {
-//     const handleScroll = () => {
-//       setScrolled(window.scrollY > 100)
-//     }
-//     window.addEventListener('scroll', handleScroll)
-//     return () => window.removeEventListener('scroll', handleScroll)
-//   }, [])
-//   const toggleMobileMenu = () => {
-//     setMobileMenuOpen(!mobileMenuOpen)
-//   }
-//   const closeMobileMenu = () => {
-//     setMobileMenuOpen(false)
-//   }
-//   const handleScrollTo = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
-//     e.preventDefault();
-//     closeMobileMenu();
-//     const element = document.getElementById(id);
-//     if (element) {
-//       const header = document.getElementById('header');
-//       const headerHeight = header?.offsetHeight || 0;
-//       const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-//       const offsetPosition = elementPosition - headerHeight;
-//       window.scrollTo({
-//         top: offsetPosition,
-//         behavior: 'smooth'
-//       });
-//       // Update URL
-//       window.history.pushState({}, '', `#${id}`);
-//     }
-//   };
-//   return (
-//     <header 
-//       id="header"
-//       className={`fixed w-full z-50 transition-all duration-300 ${
-//         scrolled ? 'bg-white shadow-md' : 'bg-transparent'
-//       }`}
-//     >
-//       <nav className="container mx-auto px-4 py-3">
-//         <div className="flex items-center justify-between">
-//           {/* Logo */}
-//           <Link href="/" className="flex items-center" onClick={closeMobileMenu}>
-//             <Image
-//               src="/assets/img/fantasy.jpeg"
-//               alt="EventPlanner"
-//               width={170}
-//               height={80}
-//               className="h-30 w-auto"
-//             />
-//           </Link>
-//           {/* Desktop Navigation */}
-//           <div className="hidden md:flex items-center space-x-6">
-//             <Link 
-//               href="#hero" 
-//               className={`hover:text-primary font-medium transition-colors ${
-//                 scrolled ? 'text-gray-800' : 'text-white'
-//               }`}
-//               onClick={(e) => handleScrollTo(e, 'hero')}
-//               scroll={false}
-//             >
-//               Home
-//             </Link>
-//             <Link 
-//               href="#services" 
-//               className={`hover:text-primary font-medium transition-colors ${
-//                 scrolled ? 'text-gray-800' : 'text-white'
-//               }`}
-//               onClick={(e) => handleScrollTo(e, 'services')}
-//               scroll={false}
-//             >
-//               Services
-//             </Link>
-//             <Link 
-//               href="#about" 
-//               className={`hover:text-primary font-medium transition-colors ${
-//                 scrolled ? 'text-gray-800' : 'text-white'
-//               }`}
-//               onClick={(e) => handleScrollTo(e, 'about')}
-//               scroll={false}
-//             >
-//               About
-//             </Link>
-//             <Link 
-//               href="#gallery" 
-//               className={`hover:text-primary font-medium transition-colors ${
-//                 scrolled ? 'text-gray-800' : 'text-white'
-//               }`}
-//               onClick={(e) => handleScrollTo(e, 'gallery')}
-//               scroll={false}
-//             >
-//               Gallery
-//             </Link>
-//             <Link 
-//               href="#contact" 
-//               className={`hover:text-primary font-medium transition-colors ${
-//                 scrolled ? 'text-gray-800' : 'text-white'
-//               }`}
-//               onClick={(e) => handleScrollTo(e, 'contact')}
-//               scroll={false}
-//             >
-//               Contact
-//             </Link>
-//           </div>
-//           {/* Mobile Menu Button */}
-//           <button
-//             className="md:hidden text-gray-800 focus:outline-none"
-//             onClick={toggleMobileMenu}
-//             aria-expanded={mobileMenuOpen}
-//             aria-label="Toggle navigation"
-//           >
-//             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-//               {mobileMenuOpen ? (
-//                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-//               ) : (
-//                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-//               )}
-//             </svg>
-//           </button>
-//         </div>
-//         {/* Mobile Menu */}
-//         <div 
-//           className={`md:hidden transition-all duration-300 ease-in-out ${
-//             mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
-//           }`}
-//         >
-//           <div className="pt-4 pb-2 space-y-2">
-//             <Link 
-//               href="#hero" 
-//               className="block px-3 py-2 text-gray-800 hover:bg-gray-100 rounded-md transition-colors"
-//               onClick={(e) => handleScrollTo(e, 'hero')}
-//               scroll={false}
-//             >
-//               Home
-//             </Link>
-//             <Link 
-//               href="#services" 
-//               className="block px-3 py-2 text-gray-800 hover:bg-gray-100 rounded-md transition-colors"
-//               onClick={(e) => handleScrollTo(e, 'services')}
-//               scroll={false}
-//             >
-//               Services
-//             </Link>
-//             <Link 
-//               href="#about" 
-//               className="block px-3 py-2 text-gray-800 hover:bg-gray-100 rounded-md transition-colors"
-//               onClick={(e) => handleScrollTo(e, 'about')}
-//               scroll={false}
-//             >
-//               About
-//             </Link>
-//             <Link 
-//               href="#gallery" 
-//               className="block px-3 py-2 text-gray-800 hover:bg-gray-100 rounded-md transition-colors"
-//               onClick={(e) => handleScrollTo(e, 'gallery')}
-//               scroll={false}
-//             >
-//               Gallery
-//             </Link>
-//             <Link 
-//               href="#contact" 
-//               className="block px-3 py-2 text-gray-800 hover:bg-gray-100 rounded-md transition-colors"
-//               onClick={(e) => handleScrollTo(e, 'contact')}
-//               scroll={false}
-//             >
-//               Contact
-//             </Link>
-//           </div>
-//         </div>
-//       </nav>
-//     </header>
-//   )
-// }
 __turbopack_context__.s({
     "default": (()=>Header)
 });
@@ -295,7 +117,7 @@ function Header() {
             className: `absolute -bottom-1 left-1/2 h-1 w-1 rounded-full bg-primary transition-all duration-500 transform -translate-x-1/2 ${activeSection === section ? 'w-6 opacity-100' : 'opacity-0'}`
         }, void 0, false, {
             fileName: "[project]/src/components/Header.tsx",
-            lineNumber: 287,
+            lineNumber: 95,
             columnNumber: 5
         }, this);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
@@ -321,12 +143,12 @@ function Header() {
                                 priority: true
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Header.tsx",
-                                lineNumber: 310,
+                                lineNumber: 118,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/Header.tsx",
-                            lineNumber: 304,
+                            lineNumber: 112,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -348,20 +170,20 @@ function Header() {
                                                 children: section.charAt(0).toUpperCase() + section.slice(1)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Header.tsx",
-                                                lineNumber: 326,
+                                                lineNumber: 134,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Orb, {
                                                 section: section
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Header.tsx",
-                                                lineNumber: 337,
+                                                lineNumber: 145,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, section, true, {
                                         fileName: "[project]/src/components/Header.tsx",
-                                        lineNumber: 325,
+                                        lineNumber: 133,
                                         columnNumber: 15
                                     }, this)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -371,13 +193,13 @@ function Header() {
                                     children: "Get in Touch"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Header.tsx",
-                                    lineNumber: 342,
+                                    lineNumber: 150,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/Header.tsx",
-                            lineNumber: 323,
+                            lineNumber: 131,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -390,33 +212,33 @@ function Header() {
                                     className: `absolute top-1/2 left-1/2 w-6 h-0.5 bg-gray-800 transform -translate-x-1/2 -translate-y-1/2 transition-all duration-300 ${mobileMenuOpen ? 'rotate-45' : '-translate-y-2'}`
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Header.tsx",
-                                    lineNumber: 362,
+                                    lineNumber: 170,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: `absolute top-1/2 left-1/2 w-6 h-0.5 bg-gray-800 transform -translate-x-1/2 -translate-y-1/2 transition-all duration-300 ${mobileMenuOpen ? 'opacity-0' : 'opacity-100'}`
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Header.tsx",
-                                    lineNumber: 365,
+                                    lineNumber: 173,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: `absolute top-1/2 left-1/2 w-6 h-0.5 bg-gray-800 transform -translate-x-1/2 -translate-y-1/2 transition-all duration-300 ${mobileMenuOpen ? '-rotate-45' : 'translate-y-2'}`
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Header.tsx",
-                                    lineNumber: 368,
+                                    lineNumber: 176,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/Header.tsx",
-                            lineNumber: 356,
+                            lineNumber: 164,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/Header.tsx",
-                    lineNumber: 302,
+                    lineNumber: 110,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -447,12 +269,12 @@ function Header() {
                                         children: section.charAt(0).toUpperCase() + section.slice(1)
                                     }, section, false, {
                                         fileName: "[project]/src/components/Header.tsx",
-                                        lineNumber: 395,
+                                        lineNumber: 203,
                                         columnNumber: 17
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Header.tsx",
-                                lineNumber: 393,
+                                lineNumber: 201,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -464,34 +286,34 @@ function Header() {
                                     children: "Contact Us"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Header.tsx",
-                                    lineNumber: 411,
+                                    lineNumber: 219,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Header.tsx",
-                                lineNumber: 410,
+                                lineNumber: 218,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/Header.tsx",
-                        lineNumber: 392,
+                        lineNumber: 200,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/Header.tsx",
-                    lineNumber: 375,
+                    lineNumber: 183,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/Header.tsx",
-            lineNumber: 301,
+            lineNumber: 109,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/Header.tsx",
-        lineNumber: 293,
+        lineNumber: 101,
         columnNumber: 5
     }, this);
 }
