@@ -18,9 +18,9 @@ const heroSlides = [
   },
   {
     id: 2,
-    title: "Corporate Excellence",
+    title: "Unforgetable wedding Receptions",
     subtitle: "Professional events that make an impact",
-    image: "/assets/hero/fantasy-events-decor-2.jpeg",
+    image: "/assets/hero/lavineda-hall-event-26-04-25.png",
     cta: "Organize Your Event"
   },
   {
